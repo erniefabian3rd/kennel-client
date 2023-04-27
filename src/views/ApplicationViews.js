@@ -7,6 +7,7 @@ import { AnimalDetails } from '../components/animal/AnimalDetail'
 import { CustomerList } from '../components/customer/CustomerList'
 import { EmployeeList } from '../components/employee/EmployeeList'
 import { EmployeeDetail } from '../components/employee/EmployeeDetail'
+import { EmployeeForm } from '../components/employee/EmployeeForm'
 import { Login } from "../components/auth/Login"
 import { Register } from "../components/auth/Register"
 import { useEffect } from "react"
@@ -38,6 +39,7 @@ export const ApplicationViews = () => {
 			<Route path="/employees">
 				<Route index element={<EmployeeList />} />
 				<Route path=":employeeId" element={<EmployeeDetail />} />
+				<Route path="create" element={<EmployeeForm />} />
 			</Route>
 			<Route path="/login" element={<Login />} />
 			<Route path="/register" element={<Register />} />
